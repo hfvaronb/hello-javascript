@@ -11,7 +11,7 @@ if (myName == "Hector") {
 
 // 2. Imprime por consola un mensaje si el usuario y contraseÃ±a concide con unos establecidos.
 
-let userName = "hvaron";
+let userName = "hvarn";
 let userPassword = "A1B2C3";
 
 if (userName === "hvaron" && userPassword === "A1B2C3") {
@@ -22,7 +22,7 @@ if (userName === "hvaron" && userPassword === "A1B2C3") {
 
 // tenia el operador igual, se ajusta a identico === para comparar los valores
 
-// 3. Verifica si un nÃºmero es positivo, negativo o cero e imprime un mensaje.
+// 3. Verifica si un número es positivo, negativo o cero e imprime un mensaje.
 
 let number = -1;
 
@@ -31,12 +31,12 @@ if (number > 0) {
 } else if (number < 0) {
   console.log(number, "es un número negativo");
 } else {
-  console.log("El número es cero", number);
+  console.log("El número es cero");
 }
 
 // 4. Verifica si una persona puede votar o no (mayor o igual a 18) e indica cuÃ¡ntos aÃ±os le faltan.
 
-let age = 25;
+let age = 16;
 let missingAge;
 let plural;
 
@@ -51,6 +51,13 @@ if (age >= 18) {
     missingAge,
     plural
   );
+}
+
+// Corrección
+if (age >= 18) {
+  console.log("Puede votar.");
+} else {
+  console.log(`No puede votar, tiene que esperar ${18 - age}`, plural);
 }
 // 5. Usa el operador ternario para asignar el valor "adulto" o "menor" a una variable dependiendo de la edad .
 
@@ -76,7 +83,21 @@ if (
 } else if (month == "octubre" || month == "noviembre") {
   console.log("Nos encontramos en la estación de otoño");
 }
+// Corrección
+// mayor o igual que 3 y menor o igual que 5 primavera
+// mayor o igual que 6 y menor o igual que 8 verano
+// mayor o igual que 9 y menor o igual que 11 otoño
 
+let mont = 4;
+if (mont >= 3 && mont <= 5) {
+  console.log("Primavera");
+} else if (mont >= 6 && mont <= 8) {
+  console.log("Verano");
+} else if (mont >= 9 && mont <= 11) {
+  console.log("Otoño");
+} else {
+  console.log("Invierno");
+}
 // 7. Muestra el nÃºmero de dÃ­as que tiene un mes dependiendo de la variable del ejercicio anterior.
 
 if (
@@ -100,6 +121,16 @@ if (
   console.log(
     "El mes febrero tiene 28 días en un año normal y 29 cuando el año es bisiesto"
   );
+}
+
+// Corrección
+
+if (mont === 2) {
+  console.log("28 o 29 días");
+} else if ([4, 6, 9, 11].includes(mont)) {
+  console.log("30 días");
+} else {
+  console.log("31 días");
 }
 // switch
 
@@ -126,50 +157,72 @@ console.log(greeting);
 
 // 9. Usa un switch para hacer de nuevo el ejercicio 6.
 
-let months = "septiembre";
+let months = 13;
 let season;
 
 switch (months) {
-  case "enero":
+  case 1:
     season = "Estación de invierno";
     break;
-  case "febrero":
+  case 2:
     season = "Estación de invierno";
     break;
-  case "marzo":
+  case 3:
     season = "Estación de invierno";
     break;
-  case "abril":
+  case 4:
     season = "Estación de primavera";
     break;
-  case "mayo":
+  case 5:
     season = "Estación de primavera";
     break;
-  case "junio":
+  case 6:
     season = "Estación de primavera";
     break;
-  case "julio":
+  case 7:
     season = "Estación de verano";
     break;
-  case "agosto":
+  case 8:
     season = "Estación de verano";
     break;
-  case "septiembre":
+  case 9:
     season = "Estación de verano";
     break;
-  case "octubre":
+  case 10:
     season = "Estación de verano otoño";
     break;
-  case "noviembre":
+  case 11:
     season = "Estación de verano otoño";
     break;
-  case "diciembre":
+  case 12:
     season = "Estación de invierno";
     break;
   default:
     season = "Nombre de mes incorrecto.";
 }
 console.log(season);
+
+// Correcction
+
+switch (months) {
+  case 3:
+  case 4:
+  case 5:
+    console.log("Primavera");
+    break;
+  case 6:
+  case 7:
+  case 8:
+    console.log("Verano");
+    break;
+  case 9:
+  case 10:
+  case 11:
+    console.log("Otoño");
+    break;
+  default:
+    console.log("Invierno");
+}
 
 // 10. Usa un switch para hacer de nuevo el ejercicio 7.
 
@@ -214,6 +267,36 @@ switch (monthName) {
     numberOfDays = 31;
     break;
   default:
-    numberOfDays = "Nombre de mes incorrecto"
+    numberOfDays = "Nombre de mes incorrecto";
 }
 console.log("El mes", monthName, "tiene", numberOfDays, "días");
+
+// Corrección
+switch (months) {
+  case 2:
+    console.log("28 o 29 días");
+    break;
+  case 4:
+  case 6:
+  case 9:
+  case 11:
+    console.log("30 días");
+    break;
+  case 1:
+  case 3:
+  case 5:
+  case 7:
+  case 8:
+  case 10:
+  case 12:
+    break
+  default:
+    console.log("Mes incorrecto");
+}
+// Escriba un programa que sume un número decimal y un entero. En otra variable guardar el resultado
+// y mostralo en pantalla con el texto: El resultado de la suma
+
+integerNumber = 19;
+floatNumber = 14.2;
+suma = integerNumber + floatNumber;
+console.log("El resultado de la suma es", suma);

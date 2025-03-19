@@ -1,27 +1,13 @@
-// if, else if, else
+// Crea array
+myFruits = ["Banano", "Manzana", "Pera", "Aguacate", "Naranja"]
+console.log(myFruits)
 
-// if (si)
+// Array transformado en set
+setFruits = new Set(myFruits)
+console.log(setFruits)
 
-let age = 18
-
-if (age == 37) {
-    console.log("La edad es 37")
-}
-
-// else (si no)
-
-if (age == 37) {
-    console.log("La edad es 37")
-} else {
-    console.log("La edad no es 37")
-}
-
-// else if (si no, si)
-
-if (age == 37) {
-    console.log("La edad es 37")
-} else if(age < 18) {
-    console.log("Es menor de edad")
-}else{
-    console.log("La edad no es 37 ni es menor de edad")
-}
+// Set almacenado en MAP
+mapFruits = new Map()
+mapFruits.set("Fruits", setFruits)
+console.log(mapFruits)
+console.log(mapFruits.get("Fruits"))
