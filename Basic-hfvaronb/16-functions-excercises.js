@@ -23,7 +23,7 @@ function mayor(numbers, higher) {
   }
   return higher;
 }
-result = mayor([3, 8, 50, 14, 8, 16, 2], 0);
+result = mayor([3, 8, 20, 14, 8, 16, 2], 0);
 console.log(`El número mayor del arreglo es ${result}`);
 
 // 3. Crea una función que reciba un string y devuelva el número de vocales que contiene.
@@ -70,7 +70,7 @@ function primeNumber(number) {
     console.log(`${number} es primo`);
   }
 }
-primeNumber(4);
+primeNumber(2);
 // 6. Crea una función que reciba dos arrays y devuelva un nuevo array que contenga los elementos comunes entre ambos.
 
 function equalFunction() {
@@ -89,21 +89,48 @@ equalFunction();
 
 // 7. Crea una función que reciba un array de números y devuelva la suma de todos los números pares.
 
-const pair = (number) => {
+function additionPair(number) {
+  add = 0;
   for (let i = 0; i < number.length; i++) {
-    // return number.length;
-    suma = 0
-    if (number % 2 == 0) {
-      suma = suma + number
-      console.log(suma)
+    if (number[i] % 2 == 0) {
+      add = add + number[i];
     }
-  }     
-};
-let number = [2, 4, 3, 7, 8];
-(pair(number));
+  }
+  return add;
+}
+console.log(additionPair([1, 7, 3, 4, 5, 6]));
 
 // 8. Crea una función que reciba un array de números y devuelva un nuevo array con cada número elevado al cuadrado.
 
+myNumbersArray = [2, 3];
+
+myNumbersArray.forEach((element) => {
+  newArray = [element] ** 2;
+  console.log(newArray);
+});
+
 // 9. Crea una función que reciba una cadena de texto y devuelva la misma cadena con las palabras en orden inverso.
 
+function reverseText(text) {
+  newString = "";
+
+  for (let i = text.length - 1; i >= 0; i--) {
+    newString += text[i];
+    // console.log(newString)
+  }
+  return newString;
+}
+reverse = reverseText("hola")
+console.log(reverse)
+ 
+
 // 10. Crea una función que calcule el factorial de un número dado.
+
+function factorial(number) {
+  for (let i = number - 1; i >= 1; i--) {
+    // console.log(i)
+    number = number * i
+  }
+  return number
+}
+console.log(factorial(6))
