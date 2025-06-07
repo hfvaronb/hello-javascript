@@ -1,8 +1,7 @@
-function factorial(number) {
-  for (let i = number - 1; i >= 1; i--) {
-    // console.log(i)
-    number = number * i
-  }
-  return number
+class MathOperations {
+    static sum(a, b) {
+        return a + b
+    }
 }
-console.log(factorial(6))
+
+console.log(MathOperations.sum(5, 8))
