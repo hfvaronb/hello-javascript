@@ -1,30 +1,17 @@
-class AllBoard {
-    constructor(type) {
-        this.type = type
+function sumIntegers(a, b) {
+    if (typeof a !== "number" || typeof b !== "number") {
+        throw new TypeError("Esta operación solo suma números")
     }
-
-    way() {
-        console.log("Via de transito")
+    if (!Number.isInteger(a) || !Number.isInteger(b)) {
+        throw new Error("Esta operación solo suma numeros enteros")
     }
-
+    return a + b
 }
-
-class Land extends AllBoard {
-
-    way() {
-        console.log("Transita por tierra")
-    }
+try {
+    console.log(sumIntegers(5, 10))
+    console.log(sumIntegers("5", 10))
+    console.log(sumIntegers(5, "10"))
+    console.log(sumIntegers("5", "10"))
+} catch (error) {
+    console.log("Se ha producido un error:", error.message)
 }
-
-class Air extends AllBoard {
-
-    way() {
-        console.log("Transita por el aire")
-    }
-}
-
-let myTrain = new Land("Bus")
-myTrain.way()
-
-let myPlane = new Air("Avión")
-myPlane.way()
