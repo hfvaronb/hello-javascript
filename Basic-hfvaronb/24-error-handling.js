@@ -46,7 +46,7 @@ function sumIntegers(a, b) {
     return a + b
 }
 try {
-    console.log(sumIntegers(5, 10))
+    console.log(sumIntegers(0, 10))
     // console.log(sumIntegers("5", 10))
     console.log(sumIntegers(5, "10"))
     // console.log(sumIntegers("5", "10"))
@@ -82,7 +82,7 @@ class SumZeroIntegerError extends Error {
 }
 
 try {
-    console.log(sumIntegers(0, 10))
+    console.log(sumIntegers(1, 10))
 } catch (error) {
     console.log("Se ha producido un error personalizado:", error.message)
     error.printNumbers()
